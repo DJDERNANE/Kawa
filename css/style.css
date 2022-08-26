@@ -2,6 +2,7 @@
 	padding: 0px;
 	margin: 0px;
 }
+/*======================= front style ======================*/
 .parent{
 	display: flex;
 	flex-direction: column;
@@ -33,6 +34,9 @@
 .picture img.loaded{
 	transform: translateY(0px);
 }
+
+
+/*================= nav bar style =================*/
 .navbar{
 	z-index: 100000;
 	position: fixed;
@@ -70,6 +74,20 @@
 	box-shadow: black 4px 3px 2px;
 	border-radius: 7px;
 }
+.togglle{
+	display: none;
+}
+.navbar.scrolled{
+	background-color: #0096FF;
+	transition: all 1.5s;
+}
+.logo{
+	width: 60px;
+	height: 60px;
+	margin-left: 40px;
+}
+
+/*================== Main style ===================*/
 .main{
 	display: flex;
 	justify-content: center;
@@ -83,12 +101,14 @@
 	transform: translateY(0px);
 }
 .main .text{
+	margin-top: 120px;
 	margin: 30px;
 	margin-left: 62px;
 }
 .title{
 	font-size: 60px;
 	padding: 10px;
+	margin-top: 80px;
 }
 .title span{
 	color: #3b9ae1;
@@ -115,6 +135,9 @@
 .btns button:nth-child(2){
 	background-color: white;
 }
+
+/*===================== Services style =================*/
+
 .services, .doctors{
 	height: 80vh;
 	display: flex;
@@ -168,6 +191,7 @@
 .child1.active{
 	background-color:  #0096FF;
 }
+/*================ footer Style ===============*/
 .footer{
 	background-color: #23282d;
 	display: flex;
@@ -228,6 +252,19 @@ form div {
 	display: flex;
 	justify-content: center;
 }
+.address div a{
+	cursor: pointer;
+	transition: all 1s;
+}
+.address div a:hover{
+	margin-left: 23px;
+}
+.address div a i{
+	font-size: 25px;
+	margin: 10px;
+}
+
+/*============ About Us style ===================*/
 .container-stats{
 	width: 85%;
 	display: flex;
@@ -261,26 +298,12 @@ form div {
 	color: #0096FF;
 	font-weight: bold;
 }
-hr{
-	text-align: center;
-}
-.togglle{
-	display: none;
-}
 h4{
 	padding: 25px;
 	text-align: center;
 }
 
-.navbar.scrolled{
-	background-color: #0096FF;
-	transition: all 1.5s;
-}
-.logo{
-	width: 60px;
-	height: 60px;
-	margin-left: 40px;
-}
+/*================ Team Style =================*/
 .item{
 	height: 360px;
 	background-color:#0096FF;
@@ -305,15 +328,10 @@ h4{
 	display: flex;
 	justify-content: center;
 }
-.address div a{
-	cursor: pointer;
-	transition: all 1s;
-}
-.address div a:hover{
-	margin-left: 23px;
-}
-.address div a i{
-	font-size: 25px;
-	margin: 10px;
-}
 
+
+
+
+hr{
+	text-align: center;
+}
