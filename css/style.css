@@ -1,337 +1,321 @@
 *{
-	padding: 0px;
-	margin: 0px;
+    margin: 0;
+    padding: 0;
 }
-/*======================= front style ======================*/
-.parent{
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	width: 100%;
-	position: relative;
+/*********************** Header styling **************************/
+ .front{
+    height: 100vh;
+    background-color: #081853;
+ }
+ .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    background-color: #081853;
+    z-index: 10000;
+ }
+ .navlist_btn div{
+    width: 40px;
+    background-color: white;
+    height: 6px;
+    margin: 5px;
+    border-radius: 7px;
 }
-.dsicoration{
-	position: absolute;
-	height: 100vh;
-	width: 50%;
-	right: 0px;
-	top: 0px;
-	background-color: #0096FF;
-	opacity: 0.6;
-	z-index: -1;
+.navlist_btn.active div:first-child{
+    display: none;
+  
 }
-.picture{
-	position: absolute;
-	right: 20%; 
-	top: 20%;
-	bottom: 0px
+.navlist_btn.active div:nth-child(2){
+      transform: rotate(45deg) translateY(8px);
+      transition: all 1.5s;
 }
-.picture img{
-	height: 100%;
-	transform: translateY(350px);
-	transition: all 2s;
+.navlist_btn.active div:nth-child(3){
+    transform: rotate(-45deg) translateY(-8px);
+    transition: all 1.5s;
 }
-.picture img.loaded{
-	transform: translateY(0px);
+.logo h1 span:first-child, .main p span:first-child{
+    color: white;
 }
-
-
-/*================= nav bar style =================*/
-.navbar{
-	z-index: 100000;
-	position: fixed;
-	width: 100%;
-}
-.navbar ul{
-	display: flex;
-	list-style-type: none;
-	margin-right: 100px;
-	height: 100%;
-	align-items: center;
-	margin: 0;
-}
-.navbar ul li{
-	display: flex;
-	align-items: center;
-	height: 100%;
-}
-.navbar ul li a{
-	margin: 10px;
-	margin-right: 30px;
-	font-size: 21px;
-	color: black;
-	text-decoration: none;
-	font-weight: 400;
-}
-.navbar ul li a:hover{
-	font-weight: 600;
-}
-.navbar ul li a button{
-	border: none;
-	background-color: #0082df;
-	color: white;
-	padding: 4px;
-	box-shadow: black 4px 3px 2px;
-	border-radius: 7px;
-}
-.togglle{
-	display: none;
-}
-.navbar.scrolled{
-	background-color: #0096FF;
-	transition: all 1.5s;
+.logo h1 span:last-child, .main p span:last-child{
+    color: #081853;
 }
 .logo{
-	width: 60px;
-	height: 60px;
-	margin-left: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
 }
-
-/*================== Main style ===================*/
+.logo img{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
 .main{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	height: 80%;
-	transform: translateY(350px);
-	transition: all 2s;
-	padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    font-size: 70px;
+    background-color: #081853;
+    z-index: -1;
 }
-.main.loaded{
-	transform: translateY(0px);
+.main div img.loaded, .main div img{
+    width: 400px;
+    height: 400px;
 }
-.main .text{
-	margin-top: 120px;
-	margin: 30px;
-	margin-left: 62px;
+.main div img{
+    transform: translateY(250px);
+    transition: all 2s;
 }
-.title{
-	font-size: 60px;
-	padding: 10px;
-	margin-top: 80px;
+.main div img.loaded{
+    transform: translateY(0px);
+    
 }
-.title span{
-	color: #3b9ae1;
+/******************** nav bar styling **********/
+.navbar{
+    position: fixed;
+    width: 0px;
+    height: 88vh;
+    background-color: white;
+    right: 10px;
+    transition: all 1s;
+    z-index: 100;
+    top: 70px;
 }
-.desc{
-	width: 600px;
-	font-size: 25px;
-	padding: 10px;
+.navbar.active{
+    width: 250px;
+    display: block;
 }
-.btns{
-	margin: 10px;
-}
-.btns button{
-	width: 200px;
-	height: 50px;
-	font-size: 25px;
-	margin: 10px;
-}
-.btns button:first-child{
-	background-color: #0096FF;
-	color: white;
-	border: none;
-}
-.btns button:nth-child(2){
-	background-color: white;
-}
-
-/*===================== Services style =================*/
-
-.services, .doctors{
-	height: 80vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: #f4f4f4;
-}
-.services .title,.doctors .title{
-	padding: 10px;
-	margin: 20px;
-	margin-bottom: 25px;
-	font-size: 60px;
-	color: #3b9ae1;
-}
-.container{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 90%;
+.navbar.active ul, .navbar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
 
 }
-.container .text{
-	font-size: 25px;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	transition: content 2s; 
+.navbar.active ul li{
+    margin-top: 20px;
 }
-.photo img{
-	width:400px;
-	height: 300px;
-	transition: all 2s; 
+.navbar.active ul li i, .navbar ul li i{
+    display: none;
+    transition: all 1s;
 }
-.repaire{
-	width: 100%;
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 10px;
+.navbar.active ul li:hover i{
+    display: inline-block;
 }
-.repaire div{
-	width: 15px;
-	height: 15px;
-	border:1px solid #0096FF;
-	margin: 10px;
-	border-radius: 50%;
+.navbar.active ul li a, .navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500px;
+    font-size: 23px;
+    padding: 2px;
+    transition: all 0.5s;
 }
-.child1.active{
-	background-color:  #0096FF;
+.navbar.active ul li a:hover{
+   
+    font-size: 25px;
+    font-weight: 650;
 }
-/*================ footer Style ===============*/
+.ourservice li{
+   display: none;
+}
+.ourservice.show li{
+    display: block;
+}
+
+/******************* Services ***************/
+.services{
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 202, 247);
+}
+.services .title,.partner .title{
+    margin: 2px;
+    text-align: center;
+    background-color: #081853;
+    color: white;
+    width: 100%;
+}
+.parent{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.item{
+    cursor: pointer;
+   text-align: center;
+    height: 400px;
+    width: 280px;
+    margin:   20px;
+    transition: all 0.8s;
+}
+.item:hover{
+    height: 350px;
+    width: 320px;
+}
+.item .picture{
+    background-color: #081853;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.item:hover .picture{
+    box-shadow: black 8px 7px 6px;
+}
+.item .picture img{
+    width: 90%;
+}
+.item .service_type{
+    background-color: #081853;
+   
+    padding: 7px;
+    color: white;
+    border-radius: 19px;
+    width: 80%;
+    margin: auto;
+    margin-top: 13px;
+}
+
+/******************** Footer styling *************/
 .footer{
-	background-color: #23282d;
-	display: flex;
-	color: white;
-	padding: 15px;
-	justify-content: space-around;
+    background-color: #081853;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
-.address{
+.info{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+}
+.footer .title{
+    text-align: center;
+    color: white;
+}
+.contact{
 	display: flex;
 	flex-direction: column;
-}
-.address h3{
-	border-bottom: #0096FF solid 2px;
-	text-align: center;
-	margin: 10px;
-}
-
-.location img{
-	color: white;
-	background-color: white;
-}
-input{
-	height: 30px;
-	border: none;
-	border-bottom: white solid 2px ;
-	margin-top: 0px;
-	transition: all 1s;
-	background-color: #23282d;
-	margin: 10px;
-	width: 100%;
-	color: white;
 }
 .contact h3{
+	border-bottom: #FDAEF1 solid 2px;
 	text-align: center;
-	border-bottom: solid #0096FF 2px;
 	margin: 10px;
 }
-.envoyer{
-	display: flex;
-	justify-content: center;
-	width: 100%;
-}
-.submit{
-	width: 260px;
-	background-color: #0096FF;
-	border: none;
-	color: white;
-	font-size: 18px;
-	text-align: center;
-	margin: auto;
-}
-.follow{
-	display: flex;
-	justify-content: center;
-	margin: 15px;
-}
-form div {
-	display: flex;
-	justify-content: center;
-}
-.address div a{
+.contact div a{
 	cursor: pointer;
 	transition: all 1s;
 }
-.address div a:hover{
+.contact div a:hover{
 	margin-left: 23px;
 }
-.address div a i{
+.contact div a i{
 	font-size: 25px;
 	margin: 10px;
 }
+/*********************** Team styling **********/
+.members{
+    text-align: center;
+    height: max-content;
+}
+.member{
+    width: 280px;
+    height: 280px;
+    background-color: #CC4D85;
+    margin: 20px;
+    border-radius: 50%;
+    color: white;
+    position: relative;
+}
+.social{
+    position: absolute;
+    bottom: 0;
+    height: 0%;
+    right: 0;
+    background-color: rgba(8, 23, 35, 0.4);
+    width: 100%;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s;
+}
+.social i{
+    margin: 15px;
+    display: none;
+}
+.member:hover .social i{
+    margin: 15px;
+    display: block;
+}
+.member:hover .social{
+    height: 50%;
+}
+.member:hover .social i:hover{
+    font-size: 30px;
+}
+/************* About US **********************/
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+.about .text{
+    font-size: 25px;
+    text-align: center;
+    padding: 15px;
+}
+/***************** our partner *****************/
+.partner{
+    background-color: #FDAEF1;
+}
+.swiper {
+    width: 90%;
+    height: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
-/*============ About Us style ===================*/
-.container-stats{
-	width: 85%;
-	display: flex;
-	justify-content: space-between;
-	
-	margin-top: 20px;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #FDAEF1;
+    color: white;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
 
-}
-.container-stats div{
-	text-align: center;
-}
-.stats{
-	width: 200px;
-	height: 200px;
-	background-color: #0096FF;
-	position: relative;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.container-stats .stats div{
-	width: 150px;
-	height: 150px;
-	background-color: white;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 29px;
-	color: #0096FF;
-	font-weight: bold;
-}
-h4{
-	padding: 25px;
-	text-align: center;
-}
-
-/*================ Team Style =================*/
-.item{
-	height: 360px;
-	background-color:#0096FF;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: 20px;
-	border-radius: 8px;
-	box-shadow: #23282d 8px 5px 4px;
-}
-.doctors{
-	height: max-content;
-	padding: 20px;
-}
-.item div img{
-	width: 100%;
-	height: 200px;
-}
-.container-fluid{
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-
-
-
-hr{
-	text-align: center;
-}
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    
+  }
