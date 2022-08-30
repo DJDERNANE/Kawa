@@ -233,7 +233,7 @@
 .member{
     width: 280px;
     height: 280px;
-    background-color: #CC4D85;
+    background: linear-gradient( #d94a7f,#b15294);
     margin: 20px;
     border-radius: 50%;
     color: white;
