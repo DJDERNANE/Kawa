@@ -1,0 +1,42 @@
+@media screen and (max-width: 1040px){
+	.logo{
+		margin-top: 15px;
+	}
+.navbar ul{
+	display: none;
+}
+	.navbar.active{
+		width: 100%;
+		margin: 0px;
+	}
+	.about{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.header{
+		width: 100%;
+	}
+
+	.info{
+		flex-direction: column;
+	}
+	.pic{
+		display: flex;
+		justify-content: center;
+	}
+	.pic img{
+		width: 80%;
+		margin:15px;
+	}
+	.main div {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	#logo{
+		width: 80%;
+
+	}
+	
+}
