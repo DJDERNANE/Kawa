@@ -1,14 +1,182 @@
-@media screen and (max-width: 1040px){
+@media screen and (max-width: 1100px) and (min-width:901px){
+	.item{
+		margin: 8px;
+		width: 275px;
+	}
+	.contactus form{
+		grid-template-columns: auto auto;
+	}
+	.contactus form div.submit{
+		grid-area: 5 / 1;
+	}
+	.msg{
+		grid-area: 4 / 1 / span 1/ span 2;
+	}
+	.front{
+		background-size: cover;
+	}
+	.navigationlinks li a{
+		margin: 10px;
+	}
+}
+@media screen and (max-width: 900px) and (min-width: 601px){
+	.contactus form{
+		grid-template-columns: auto auto;
+	}
+	.contactus form div.submit{
+		grid-area: 5 / 1;
+	}
+	.msg{
+		grid-area: 4 / 1 / span 1/ span 2;
+	}
+	.contactus form div input  {
+		width: 250px;
+	}
+	.contactus form{
+		width: 85%;
+	}
+	.front{
+		background-size: cover;
+	}
+	.front-text{
+		width: 80%;
+	}
+	.front-text h1{
+		font-size: 65px;
+	}
+	.ourservice{
+		position: relative;
+	}
+	.parent{
+		grid-template-columns: auto auto;
+	}
+	.swiper-button-prev1{
+		left: -10%;
+	}
+	.swiper-button-next1{
+		right: -10%;
+	}
+	.swiper-wrapper div{
+		width: 200px;
+	}
+	/****************************nav bar Styling ******************************/
+	/****************************nav bar Styling ******************************/
+	.selectLang{
+		display: none;
+	}
+	.navbar{
+		position: fixed;
+		width: 0px;
+		background-color: white;
+		right: 10px;
+		transition: all 1.5s;
+		z-index: 100;
+		top: 70px;
+		display: none;
+	}
+	.navbar.active{
+		width: 100%;
+		display: block;
+	}
+	.navbar.active.arab{
+		direction: rtl;
+		width: 250px;
+		display: block;
+	   
+	}
+	.navbar.active .navigationlinks, .navbar .navigationlinks ,.navbar.active.arab ul{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		list-style-type: none;
+		min-height: 55vh;
+	}
+	.navbar.active ul li, .navbar.active.arab ul li{
+		margin-top: 20px;
+	}
+	.navbar.active .navigationlinks li i, .navbar .navigationlinks li i, .navbar.active.arab ul li i{
+		display: none;
+		transition: all 1.4s;
+	}
+	
+	.navbar.active.arab ul li i{
+		transform: rotate(180deg);
+	}
+	.navbar.active ul li:hover i ,.navbar.active.arab ul li:hover i{
+		display: inline-block;
+	}
+	.navbar.active .navigationlinks li a, .navbar .navigationlinks li a , .navbar.active.arab ul li a,.ourservice li a{
+		text-decoration: none;
+		color: black;
+		font-weight: 500px;
+		font-size: 23px;
+		padding: 2px;
+		transition: all 0.5s;
+	}
+	.navbar.active .navigationlinks li , .navbar .navigationlinks li {
+		font-weight: 500px;
+		font-size: 23px;
+		padding: 2px;
+		transition: all 1s;
+		cursor: pointer;
+	}
+	.navbar.active ul li a:hover{
+	   
+		font-size: 25px;
+		font-weight: 650;
+	}
+	.navlist_btn{
+		display: block;
+		position: absolute;
+		right: 15px;
+	}
+	.navlist_btn div{
+		width: 40px;
+		background-color: white;
+		height: 6px;
+		margin: 5px;
+		border-radius: 7px;
+	}
+	.navlist_btn.active div:first-child{
+		display: none;
+	  
+	}
+	.navlist_btn.active div:nth-child(2){
+		  transform: rotate(45deg) translateY(8px);
+		  transition: all 1.5s;
+	}
+	.navlist_btn.active div:nth-child(3){
+		transform: rotate(-45deg) translateY(-8px);
+		transition: all 1.5s;
+	}
 	.logo{
 		margin-top: 15px;
 	}
 .navbar ul{
 	display: none;
+	margin: auto;
 }
-	.navbar.active{
-		width: 100%;
-		margin: 0px;
+.serviceList{
+	margin: 0px;
+	padding: 0px;
+	color: black;
+	text-align: center;
+}
+.serviceList .ourservice{
+	display: none;
+}
+.contactus form{
+	width: 80%;
+}
+
+
+
+
+	.front{
+		background-size: cover;
 	}
+	
 	.about{
 		display: flex;
 		flex-direction: column;
@@ -29,14 +197,187 @@
 		width: 80%;
 		margin:15px;
 	}
-	.main div {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
-	#logo{
-		width: 80%;
-
+	.item{
+		width: 290px;
 	}
 	
+	.contact{
+		width: 100%;
+	}	
+	.pic{
+		width: 100%;
+	}
+	select{
+		width: 100%;
+		font-size: 18px;
+		border: none;
+	
+		margin: 8px;
+	}
+}
+@media screen and (max-width: 600px) and (min-width: 0px){
+	.item{
+		width: 250px;
+	}
+	.item .picture img{
+		height: 200px;
+	}
+	.front{
+		background-size: cover;
+		height: 75vh;
+	}
+	.front-text h1, .why .txt h1{
+		font-size: 35px;
+	}
+	.front-text h1 p, .why .txt p{
+		font-size: 10px;
+	}
+	.front-text{
+		width: 90%;
+		margin-left: 30px;
+	}
+	.front-text p{
+		width: 80%;
+	}
+	.parent{
+		grid-template-columns: auto ;
+	}
+	.contactus form {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.contactus form div input  {
+		width: 80%;
+	}
+	.msg{
+		display: block;
+		width: 80%;
+	}
+	.contactus .title{
+		width: 80%;
+	}
+	.why .txt div {
+		width: 80%;
+		margin-left: 50px;
+	}
+	.footer .info{
+		flex-direction: column;
+		height: max-content;
+		align-items: flex-start;
+		padding: 30px;
+	}
+	.footer .info div{
+		margin-top: 20px;
+	}
+	/****************************** NAV BAR STYLING ***************************/
+	/****************************nav bar Styling ******************************/
+	.selectLang{
+		display: none;
+	}
+	.navbar{
+		position: fixed;
+		width: 0px;
+		background-color: white;
+		right: 10px;
+		transition: all 1.5s;
+		z-index: 100;
+		top: 70px;
+		display: none;
+	}
+	.navbar.active{
+		width: 100%;
+		display: block;
+	}
+	.navbar.active.arab{
+		direction: rtl;
+		width: 250px;
+		display: block;
+	   
+	}
+	.navbar.active .navigationlinks, .navbar .navigationlinks ,.navbar.active.arab ul{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		list-style-type: none;
+		min-height: 55vh;
+	}
+	.navbar.active ul li, .navbar.active.arab ul li{
+		margin-top: 20px;
+	}
+	.navbar.active .navigationlinks li i, .navbar .navigationlinks li i, .navbar.active.arab ul li i{
+		display: none;
+		transition: all 1.4s;
+	}
+	
+	.navbar.active.arab ul li i{
+		transform: rotate(180deg);
+	}
+	.navbar.active ul li:hover i ,.navbar.active.arab ul li:hover i{
+		display: inline-block;
+	}
+	.navbar.active .navigationlinks li a, .navbar .navigationlinks li a , .navbar.active.arab ul li a,.ourservice li a{
+		text-decoration: none;
+		color: black;
+		font-weight: 500px;
+		font-size: 23px;
+		padding: 2px;
+		transition: all 0.5s;
+	}
+	.navbar.active .navigationlinks li , .navbar .navigationlinks li {
+		font-weight: 500px;
+		font-size: 23px;
+		padding: 2px;
+		transition: all 1s;
+		cursor: pointer;
+	}
+	.navbar.active ul li a:hover{
+	   
+		font-size: 25px;
+		font-weight: 650;
+	}
+	.navlist_btn{
+		display: block;
+		position: absolute;
+		right: 15px;
+	}
+	.navlist_btn div{
+		width: 40px;
+		background-color: white;
+		height: 6px;
+		margin: 5px;
+		border-radius: 7px;
+	}
+	.navlist_btn.active div:first-child{
+		display: none;
+	  
+	}
+	.navlist_btn.active div:nth-child(2){
+		  transform: rotate(45deg) translateY(8px);
+		  transition: all 1.5s;
+	}
+	.navlist_btn.active div:nth-child(3){
+		transform: rotate(-45deg) translateY(-8px);
+		transition: all 1.5s;
+	}
+	.logo{
+		margin-top: 15px;
+	}
+.navbar ul{
+	display: none;
+	margin: auto;
+}
+.serviceList{
+	margin: 0px;
+	padding: 0px;
+	color: black;
+	text-align: center;
+}
+.serviceList .ourservice{
+	display: none;
+}
+.contactus form{
+	width: 80%;
+}
 }
