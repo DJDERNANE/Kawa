@@ -9,7 +9,7 @@
 
  .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 60px;
     position: fixed;
@@ -30,6 +30,8 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 15px;
+    position: absolute;
+    left: 0px;
 }
 .logo img{
     width: 80px;
@@ -57,13 +59,14 @@
     position: relative;
     color: white;
     margin: 30px;
-    padding: 8px;
+    padding: 20px 8px;
+    cursor: pointer;
 }
 .ourservice{
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 48px;
+    top: 60px;
     left: 0px;
     width: max-content; 
     padding: 12px;
@@ -83,6 +86,10 @@
 }
 .ourservice.arab{
     margin-right: 40px;
+}
+.selectLang{
+    position: absolute;
+    right: 15px;
 }
 .selectLang select{
     
@@ -118,13 +125,17 @@
 }
 .front-text button{
     color:#6320F0;
-    width: 210px;
-    height: 65px;
+    width: 180px;
+    height: 55px;
     border: none;
     border-radius: 11px;
     font-size: 20px;
     font-weight: 500;
     margin-top: 19px;
+    transition: all 1s;
+}
+.front-text button:hover{
+    width: 250px;
 }
 .front{
     height: 100vh;
@@ -174,7 +185,7 @@
     transition: all 1s;
 }
 .item:hover .picture{
-    background: linear-gradient(to left top ,#266AD4 ,#33A9CE 15%,#1B5EA5);
+    background: linear-gradient(to left top ,#266AD4 ,#33A9CE ,#1B5EA5);
     border-radius: 10px;
 }
 .item .picture{
@@ -200,7 +211,7 @@
 
 /******************** Footer styling *************/
 .footer{
-    background: linear-gradient(to right, rgba(22, 126, 247, 1), rgba(92, 60, 220, 1));
+    background: linear-gradient(90deg, #081853, rgba(92, 60, 220, 1));
     color: white;
     display: flex;
     flex-direction: column;
@@ -253,10 +264,14 @@
     color: white;
     background: rgba(0, 0, 0, 0.48);
     width: 100%;
-    min-width: 30%
+    min-width: 30%;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    
 }
 .member:hover .social{
     height: max-content;
+    
 }
 .member:hover .social i{
     display: block;
@@ -268,7 +283,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 1.2s;
+   
     margin: auto;
     padding: 10px;
 }
@@ -305,12 +320,12 @@
     align-items: flex-start;
 }
 /***************** our partner *****************/
-.swiper {
+.swiper.myswiper {
     width: 80%;
     height: 100%;
     padding: 40px 80px;
     text-align: center;
-    position: relative;
+    overflow: hidden;
   }
 
   .swiper-slide {
@@ -330,25 +345,27 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-    box-shadow: #e4e4e4 3px 2px 1px;
-    border-radius: 11px;
-    border: solid #e4e4e4 1px;
+    
 
   }
-
-  .swiper-slide img {
+  .swiper-slide1{
+    box-shadow:  3px 2px 1px;
+    border-radius: 11px;
+    border: solid #e4e4e4 1px;
+  }
+  .swiper-slide1 img {
     display: block;
     width: 200px;
     height: 200px;
     object-fit: contain;
   }
   .swiper-button-next1{
-    background-color: rgba(10, 4, 48, 1);
+    background-color: rgba(10, 4, 48, 0.4);
     width: 40px;
     height: 40px;
     border-radius: 50%;
     position: absolute;
-    right: 0px;
+    right: -5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -365,16 +382,24 @@
     height: 40px;
     border-radius: 50%;
     position: absolute;
-    left: 0px;
+    left: -5%;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 40%;
     z-index: 1000;
   }
+  .swiper-button-prev1:hover , .swiper-button-next1:hover {
+    background-color: rgba(10, 4, 48, 1);
+  }
 a{
     text-decoration: none;
     color: white;
+}
+.Scontent{
+    width: 80%;
+    margin: auto;
+    position: relative;
 }
 
 /**************Why KAWA **********************/
@@ -405,12 +430,23 @@ a{
     font-weight: 300;
 }
 /****************************** Contact Us ************************************/
+.contactus .title{
+    margin-left: 50px;
+    color: #081853;
+}
+.contactus .title h1{
+    border-bottom: #081853 solid 2px;
+}
 .contactus form{
-    width: 70%;
     margin: auto;
     display: grid;
     grid-template-columns: auto auto auto;
     padding-bottom: 50px;
+    margin-left: 50px;
+    width: 70%;
+}
+.contactus h5{
+    margin-top: 25px;
 }
 .contactus form div{
     display: flex;
@@ -427,8 +463,11 @@ a{
     padding: 8px;
 }
 .contactus form div textarea{
-    width: 295%;
+    width: 100%;
     padding: 20px;
+}
+.msg{
+    grid-area:  span 1/ span 3;
 }
 .contactus form div.submit{
     grid-area: 4 / 1 ;
