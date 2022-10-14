@@ -6,7 +6,20 @@
     font-family: 'Roboto', sans-serif;
 }
 /*********************** Header styling **************************/
-
+.header.scrolled{
+    background-color: white;
+    box-shadow: #959494 0px 1px 0px;
+    transition: all 1.2s;
+}
+.header.scrolled .navigationlinks li a{
+    color: #081853;
+}
+.header.scrolled .selectLang select{
+    color: #081853;
+}
+.header.scrolled .serviceList ul li a{
+    color: white;
+}
  .header{
     display: flex;
     justify-content: center;
@@ -90,6 +103,7 @@
 .selectLang{
     position: absolute;
     right: 15px;
+    top:10px;
 }
 .selectLang select{
     
@@ -244,19 +258,18 @@
     height: 330px;
     margin: 20px;
     color: #081853;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     box-shadow: #595959 3px 2px 1px;
     border-radius: 11px;
+    position: relative;
 }
 .memberpic{
-    width: 280px;
-    height: 330px;
+    width: 100%;
+    height: 100%;
     border-radius: 11px;
-    position: relative;
+    
 }
 .member-info{
     position: absolute;
@@ -264,10 +277,19 @@
     color: white;
     background: rgba(0, 0, 0, 0.48);
     width: 100%;
-    min-width: 30%;
     border-bottom-left-radius: 11px;
     border-bottom-right-radius: 11px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
+}
+.member-info h5{
+    margin-top: 5px;
+}
+.member-info p{
+    font-size: 13px;
 }
 .member:hover .social{
     height: max-content;
@@ -279,22 +301,21 @@
 .social{
     width: max-content;
     height: 0;
-    font-size: 25px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-   
     margin: auto;
-    padding: 10px;
+    padding: 7px;
 }
 .social i{
-    margin: 10px;
+    margin: 5px;
     color: white;
     display: none;
 }
 
 .member:hover .social i:hover{
-    font-size: 35px;
+    font-size: 23px;
     color: #081853;
 }
 /************* About US **********************/
@@ -348,15 +369,19 @@
     
 
   }
-  .swiper-slide1{
-    box-shadow:  3px 2px 1px;
+  .swiper-slide1 a{
     border-radius: 11px;
     border: solid #e4e4e4 1px;
+    height: 250px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .swiper-slide1 img {
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
   }
   .swiper-button-next1{
@@ -397,9 +422,12 @@ a{
     color: white;
 }
 .Scontent{
-    width: 80%;
+    width: 78%;
     margin: auto;
     position: relative;
+}
+.swiper{
+    padding: 70px 20px;
 }
 
 /**************Why KAWA **********************/
@@ -437,6 +465,9 @@ a{
 .contactus .title h1{
     border-bottom: #081853 solid 2px;
 }
+.contactus .title p{
+    color: #595959;
+}
 .contactus form{
     margin: auto;
     display: grid;
@@ -444,6 +475,9 @@ a{
     padding-bottom: 50px;
     margin-left: 50px;
     width: 70%;
+}
+.contactus form label{
+    color: #595959;
 }
 .contactus h5{
     margin-top: 25px;
@@ -473,10 +507,11 @@ a{
     grid-area: 4 / 1 ;
 }
 .contactus form div.submit input{
-    background: rgba(49, 101, 237, 1);
+    background-color: #242480;
     width: 210px;
     height: 50px;
     color: white;
     border: none;
     border-radius: 11px;
+    font-size: 20px;
 }
