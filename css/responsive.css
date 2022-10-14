@@ -233,6 +233,7 @@
 			background-color: #081853;
 			width: 100%;
 			align-items: center;
+			
 		}
 		.ourservice{
 			top: 0px;
@@ -260,11 +261,6 @@
 		margin-top: 8px;
 		font-size: 15px;
 	}
-	
-	
-	
-	
-	
 	/*******************Partner Styling ****************/
 	.swiper-slide1 a , .member{
 		width: 140px;
